@@ -1,52 +1,70 @@
-![](https://i.imgur.com/xG74tOh.png)
+# Getting Started with Create React App
 
-# Exercício de classe 🏫
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Fluxo de login
+## Available Scripts
 
-O objetivo deste exercício é criar um SPA, utilizando a biblioteca `react-router-dom`.
+In the project directory, you can run:
 
-Este SPA terá 3 **rotas**:
-- Home (`/`)
-- Login (`/login`)
-- Perfil (`/perfil`)
+### `npm start`
 
-**Home**:
-Na home poderemos acessar as rotas *Perfil* e *Login* por links ou botões. 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Login**:
-Na página de login poderemos acessar as rotas *Perfil* e *Home* por links ou botões. 
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-**Perfil**:
-Na página de perfil poderemos acessar a rota *Home* e *Login* por links ou botões. 
-Essa rota deverá ser protegida, somente podendo ser acessada quando o usuário estiver logado (represente isso no estado da sua aplicação).
+### `npm test`
 
-## Fluxo extra
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Modifique/crie as seguintes **rotas**:
-- Login (`/login`)
-- Perfil (`/:perfil`)
+### `npm run build`
 
-**Login**:
-Na página de login deveremos informar, por meio de um `<input>` o nosso usuário do Github. Ao fazer isso, deveremos requisitar o recurso `https://api.github.com/users/:username` da [API do Github](https://docs.github.com/pt/rest/reference/users#get-a-user) afim de "autenticar" o nosso usuário. Se o status da resposta da requisição não estiver na casa dos 200 (OK), o nosso usuário não será autenticado, caso contrário, ele será. Após autenticado, sua aplicação deverá redirecionar o usuário a rota *Perfil*, passando o perfil recebido no input como parametro de query (ex. `/mdnm`).
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-**Perfil**:
-Na página de perfil deveremos receber como parametro um usuário autenticado do Github. Com essa informação, poderemos requisitar o recurso `https://api.github.com/users/:username` da [API do Github](https://docs.github.com/pt/rest/reference/users#get-a-user) e com um retorno bem sucedido, mostrar em tela quaisquer dos dados que a API do Github nos retorna (ex. `name`). 
-Essa rota deverá ser protegida, somente podendo ser acessada quando o usuário estiver logado (represente isso no estado da sua aplicação).
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-**Dicas**
-- Tente guardar o estado de autenticação de sua aplicação em um Contexto, afim de reduzir *Prop-drilling*
-- Utilize a API de `fetch` para requisitar a API do Github
-- Leia atentamente a documentação da API do Github
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
----
+### `npm run eject`
 
-Preencha a checklist para finalizar o exercício:
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-- [ ] Resolver o exercício
-- [ ] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos ou `git add nome_do_arquivo` para adicionar um arquivo específico)
-- [ ] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
-- [ ] Pushar os commits na sua branch na origem (`git push origin nome-da-branch`)
-- [ ] Realizar o pull request
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-###### tags: `módulo 3` `front-end` `React` `exercício de classe`
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
