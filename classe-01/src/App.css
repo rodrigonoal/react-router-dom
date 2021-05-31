@@ -1,0 +1,25 @@
+.App {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.botoes {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+}
