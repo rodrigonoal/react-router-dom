@@ -12,7 +12,6 @@ jobs:
     steps:
     - uses: crondaemon/close-pr@v1
       with:
-        # Optional. Post a issue comment just before closing a pull request.
-        comment: "We do not accept PRs. If you have any questions, please feel free to contact us."
+        comment: "Pull request fechado para proteger a branch principal :)"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
