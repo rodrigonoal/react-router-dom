@@ -11,6 +11,15 @@ import {
   Switch
 } from 'react-router-dom';
 
+function ProtectedRoutes(props) {
+  const auth = useAuth();
+
+  return(
+    <Route render={()=> auth.token ? props.children : <Redirect to='/login' />} />
+  );
+}
+
+
 function App() {
   return (
     <div className="App">
