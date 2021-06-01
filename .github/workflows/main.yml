@@ -1,12 +1,18 @@
+  on: 
+    push: 
+      branches: 
+        - master
   name: protect-branch-by-user
-  on: push
 
   jobs:
-    runs-on: ubuntu-latest
-    steps:
-      uses: actions/checkout@v1
-      uses: yamatatsu/protect-branch-by-user@1.0.4
-      with:
-        userId: mdnm
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    protect:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Get lastest code
+        uses: actions/checkout@v1
+      - name: protect
+        uses: yamatatsu/protect-branch-by-user@1.0.4
+        with:
+          userId: mdnm
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
