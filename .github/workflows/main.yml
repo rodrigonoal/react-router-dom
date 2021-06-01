@@ -1,6 +1,6 @@
   on: 
     pull_request: 
-      branches: 
+      branches:  
         - master
   name: protect-branch-by-user
 
@@ -10,9 +10,10 @@
       steps:
       - name: Get lastest code
         uses: actions/checkout@v1
+        
       - name: protect
         uses: yamatatsu/protect-branch-by-user@1.0.4
         with:
           userId: mdnm
-        env:
+        env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
