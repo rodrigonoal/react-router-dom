@@ -1,12 +1,13 @@
-import React from "react";
-
 import { Link } from "react-router-dom";
+import useAuth from '../hooks/useAuth';
 
 function Home() {
+  const auth = useAuth();
+
   return (
     <div>
       Home
-      <Link to="/profile">Meu perfil</Link>
+      {auth.token? <Link to='/profile'>Profile</Link> :<Link to="/login">Login</Link>}
     </div>
   );
 }
