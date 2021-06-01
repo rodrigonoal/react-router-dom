@@ -1,0 +1,2 @@
+- name: protect-branch-by-user
+  uses: yamatatsu/protect-branch-by-user@1.0.4
